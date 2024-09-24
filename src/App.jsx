@@ -3,7 +3,7 @@ import AppLayout from "./layouts/AppLayout"
 import LandingPage from "./pages/LandingPage";
 import Dashboard from "./pages/Dashboard";
 import Auth from "./pages/Auth";
-import Link from "./pages/link";
+import Link from "./pages/Link";
 import RedirectLink from "./pages/RedirectLink";
 import UrlProvider from "./context";
 import RequireAuth from "./components/RequireAuth";
