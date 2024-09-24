@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/card"
 import { Button } from './ui/button';
 import { BeatLoader } from 'react-spinners';
-import Error from './error';
+import Error from './Error';
 import { useEffect, useState } from 'react';
 import * as Yup from 'yup';
 import useFetch from '@/hooks/useFetch';
