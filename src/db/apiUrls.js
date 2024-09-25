@@ -54,12 +54,12 @@ export async function createUrl({ title, longUrl, customUrl, user_id }, qrcode) 
         .upload(fileName, qrcode);
 
     if (storageError) throw new Error(storageError.message);
- 
+
     const qr = `${supabaseUrl}/storage/v1/object/public/qrs/${fileName}`;
 
     const { data, error } = await supabase
         .from("urls")
-        .insert([
+        .insert(
             {
                 title,
                 user_id,
@@ -67,8 +67,7 @@ export async function createUrl({ title, longUrl, customUrl, user_id }, qrcode) 
                 custom_url: customUrl || null,
                 short_url,
                 qr,
-            },
-        ])
+            })
         .select();
 
     if (error) {
